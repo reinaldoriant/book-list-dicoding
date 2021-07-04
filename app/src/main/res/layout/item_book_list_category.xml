@@ -5,16 +5,16 @@
     android:id="@+id/cl_book"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginBottom="40dp">
+    android:layout_marginStart="4dp"
+    android:layout_marginLeft="4dp">
 
-    <ImageView
-        android:id="@+id/iv_image_book"
+    <ImageButton
+        android:id="@+id/ib_image_book"
         android:layout_width="wrap_content"
         android:layout_height="178dp"
         android:adjustViewBounds="true"
         android:background="@drawable/bg_white_overlay_4dp"
+        android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,24 +27,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/iv_image_book"
-        app:layout_constraintStart_toStartOf="@+id/iv_image_book"
-        app:layout_constraintTop_toBottomOf="@+id/iv_image_book">
-
-        <TextView
-            android:id="@+id/tv_author"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:gravity="start"
-            android:minWidth="100dp"
-            android:textColor="@color/gray_600"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/tv_author_book" />
+        app:layout_constraintEnd_toEndOf="@+id/ib_image_book"
+        app:layout_constraintStart_toStartOf="@+id/ib_image_book"
+        app:layout_constraintTop_toBottomOf="@+id/ib_image_book">
 
         <TextView
             android:id="@+id/tv_book_title"
@@ -52,16 +37,34 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
             android:layout_marginLeft="7dp"
-            android:layout_marginTop="8dp"
-            android:ellipsize="end"
             android:gravity="start"
+            android:maxLines="2"
+            android:ellipsize="end"
             android:minWidth="100dp"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_author"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/tv_title_book" />
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="4dp"
+            android:gravity="start"
+            android:minWidth="100dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/gray_600"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_book_title"
+            tools:text="@string/tv_author_book" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

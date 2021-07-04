@@ -4,9 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.CenterInside
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.ruangaldo.booklist.R
 import com.ruangaldo.booklist.data.model.Book
 import com.ruangaldo.booklist.databinding.ItemBookListCategoryBinding
@@ -37,13 +34,12 @@ class BookListCategoryAdapter(val bookList: List<Book>) :
             with(binding) {
                 tvBookTitle.text = bookList[position].title
                 tvAuthor.text = bookList[position].author
-                ivImageBook.apply{
+                ibImageBook.apply {
                     setImageResource(bookList[position].img)
+                    setOnClickListener {
+                        onItemClickCallback.onItemClick(bookList[position])
+                    }
                 }
-                ivImageBook.setOnClickListener {
-                    onItemClickCallback.onItemClick(bookList[position])
-                }
-
                 val space = 16
                 when (position) {
                     0 -> {

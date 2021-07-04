@@ -4,7 +4,7 @@ import com.ruangaldo.booklist.R
 import com.ruangaldo.booklist.data.model.Book
 
 object StoryBook {
-    val StoryBook: List<Book>
+    val book: List<Book>
         get() = mutableListOf(
             Book(
                 "Planes Fire & Rescue",
