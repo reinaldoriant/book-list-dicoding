@@ -11,10 +11,10 @@ object BookData {
             BookList(bookResult = BusinessBook.book, category = "Bisnis dan Ekonomi"),
             "Romansa",
             BookList(bookResult = RomanceBook.book, category = "Romansa"),
-            "Buku Cerita",
-            BookList(bookResult = StoryBook.book, category = "Buku Cerita"),
-            "Buku Cerita",
-            BookList(bookResult = StoryBook.book, category = "Buku Cerita")
+            "Komik",
+            BookList(bookResult = ComicsBook.book, category = "Komik"),
+            "Biografi",
+            BookList(bookResult = BiographyBook.book, category = "Biografi")
         )
 
 }

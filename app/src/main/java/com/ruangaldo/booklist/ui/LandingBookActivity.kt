@@ -36,10 +36,6 @@ class LandingBookActivity : AppCompatActivity() {
                 startActivity(Intent(this@LandingBookActivity, AccountActivity::class.java))
                 finish()
             }
-
-            ibLanding.setOnClickListener {
-                onBackPressed()
-            }
         }
     }
 
