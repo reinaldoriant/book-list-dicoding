@@ -7,6 +7,12 @@
     <string name="tv_author_book">Reinaldo Riant Kurnia Perdana</string>
     <string name="tv_user">Reinaldo Riant Kurnia Perdana</string>
     <string name="tv_email">reinaldoriant@gmail.com</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_title_synopsis_book">Sinopsis</string>
+    <string name="tv_synopsis_book">Tahukah kamu, bagaimana kisah Nabi Adam si manusia pertama, kisah Nabi Ibrahim yang tak mempan dibakar api, serta kisah hijrah yang menakjubkan Nabi Muhammad Saw.? Di manakah para nabi dan rasul diturunkan Allah di muka bumi ini? Yuk, temukan semua kisahnya dalam buku ini. Pssst, buku ini dilengkapi dengan trivia persebaran nabi dan rasul, lho. Temukan halaman berlogo khusus, lalu pindai dengan smart pen-mu, ya. Kamu akan menemukan kejutan menariknya! 25 Kisah Nabi dan Rasul adalah buku yang tepat untuk anak saleh dan salehah seperti kalian. Selamat membaca!</string>
+    <string name="tv_title_date">Tanggal Terbit</string>
+    <string name="tv_date">05 June 2021</string>
+    <string name="tv_title_publisher">Penerbit</string>
+    <string name="tv_publisher">Penerbit Ruang Aldo</string>
+    <string name="tv_title_isbn">ISBN</string>
+    <string name="tv_isbn">1404514022991</string>
 </resources>

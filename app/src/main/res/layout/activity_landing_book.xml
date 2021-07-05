@@ -9,29 +9,42 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tb_apps"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:background="@color/blue"
-        app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-        <ImageButton
-            android:id="@+id/ib_landing"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="start"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:background="@null"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_back"
-            tools:ignore="ContentDescription" />
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_marginVertical="8dp"
+           android:layout_gravity="center"
+           android:orientation="horizontal"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:id="@+id/iv_logo"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:scaleType="centerInside"
+               android:src="@drawable/ic_book_logo_white"
+               tools:ignore="ContentDescription" />
+           <TextView
+               android:layout_marginStart="8dp"
+               android:layout_gravity="center"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/tv_book_logo"
+               android:textSize="16sp"
+               android:textStyle="bold|italic"
+               android:textColor="@color/white"
+               android:layout_marginLeft="8dp" />
+       </LinearLayout>
+
 
         <ImageButton
             android:id="@+id/ib_user"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@null"
             android:layout_marginEnd="16dp"
             android:layout_gravity="end"

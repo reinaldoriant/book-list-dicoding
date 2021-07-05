@@ -22,7 +22,11 @@ class LandingBookActivity : AppCompatActivity() {
                 override fun onItemClickBook(data: Book, type: Int) {
                     when (type) {
                         LandingBookAdapter.ITEM_BOOK_LIST -> {
-
+                            val args = Bundle()
+                            val fragment = BookDetailsBottomSheet()
+                            fragment.show(supportFragmentManager, BookDetailsBottomSheet.TAG)
+                            fragment.arguments = args
+                            args.putParcelable("bookData", data)
                         }
                     }
                 }
