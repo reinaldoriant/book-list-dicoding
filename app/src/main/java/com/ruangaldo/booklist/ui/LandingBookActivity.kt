@@ -1,5 +1,6 @@
 package com.ruangaldo.booklist.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ruangaldo.booklist.data.data.BookData
@@ -14,16 +15,32 @@ class LandingBookActivity : AppCompatActivity() {
         setContentView(_binding.root)
 
         val adapter = LandingBookAdapter(BookData.BookList)
-        _binding.rvContent.adapter =adapter
-        adapter.setOnItemClickCallback(object : LandingBookAdapter.OnItemClickCallback {
-            override fun onItemClickBook(data: Book, type: Int) {
-                when(type){
-                    LandingBookAdapter.ITEM_BOOK_LIST -> {
 
+        _binding.apply {
+            rvContent.adapter = adapter
+            adapter.setOnItemClickCallback(object : LandingBookAdapter.OnItemClickCallback {
+                override fun onItemClickBook(data: Book, type: Int) {
+                    when (type) {
+                        LandingBookAdapter.ITEM_BOOK_LIST -> {
+
+                        }
                     }
                 }
-            }
-        })
+            })
 
+            ibUser.setOnClickListener {
+                startActivity(Intent(this@LandingBookActivity, AccountActivity::class.java))
+                finish()
+            }
+
+            ibLanding.setOnClickListener {
+                onBackPressed()
+            }
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 }

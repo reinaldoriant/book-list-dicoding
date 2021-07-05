@@ -6,12 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".ui.LandingBookActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_apps"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <ImageButton
+            android:id="@+id/ib_landing"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/ib_user"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="end"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_user"
+            tools:ignore="ContentDescription"
+            android:layout_marginRight="16dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tb_apps" />
 </androidx.constraintlayout.widget.ConstraintLayout>
